@@ -1,2 +1,2 @@
-# MSc-major-internship
-Major internship in the MSc
+# RNA-seq analysis
+There is code for various things to do with the data after it has already been analysed
