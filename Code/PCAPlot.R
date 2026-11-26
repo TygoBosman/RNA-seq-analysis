@@ -2,7 +2,7 @@ library(DESeq2)
 library(ggplot2)
 library(stringr)
 
-setwd("C:/Users/tjcbo/OneDrive/Documenten/uni/MCLS/Year 1/Major Research Project (GSLS-MAJRP)/Code/Data/PDAMP/PDAMP")
+setwd("C:/Users/tjcbo/OneDrive/Documenten/uni/MCLS/Year 1/Major Research Project (GSLS-MAJRP)/Code/Data/PDAMP/PDAMP") 
 source("../../../R/Utils.R")
 source("../../../R/group_analysis.R")
 
@@ -27,7 +27,7 @@ vsd <- vst(dds_2, blind = TRUE) # blind = TRUE for unbiased comparison
 treatment_colors <- c("untreated" = "#999999", "mock"      = "#159D91", "flg22"     = "#D17A35", "nlp24"     = "#B05F91", "Pep1"      = "#7251A3", "SCOOP10"   = "#526A7A")
 
 # - - - Specifying the plotting directory - - - - -
-plot_dir <- "../../analysis_pca"
+plot_dir <- "../../analysis_pca" # set this to the directory you want the plots saved to 
 
 
 # - - - - Function to make PCA plots for subsets of the data - - - - -
@@ -45,9 +45,7 @@ make_pca_plot <- function(vsd_subset, plot_title, groups) {
     theme_classic(base_size = 14) +
     theme(plot.title = element_text(hjust = 0.5, face = "bold"), legend.position = "right")
   
-  # filename <- file.path(plot_dir, paste0("PCA_", gsub(" ", "_", plot_title), ".png"))
-  ggsave(filename = file.path(plot_dir, paste0("PCA_", gsub(" ", "_", plot_title), ".png")), plot = p, width = 10, height = 8, dpi = 300)
-  # message("Saved: ", filename)
+  ggsave(filename = file.path(plot_dir, paste0("PCA_", gsub(" ", "_", plot_title), ".png")), plot = p, width = 10, height = 8, dpi = 300) # save the plot as a PNG file
   p  # return the plot too
 }
 
@@ -59,6 +57,6 @@ plot <- make_pca_plot(vsd, "PCA of all RNA-seq samples", c("treatment", "tempera
 # plot + facet_wrap(~ time) # able to display a seperate plot for each coefficient
 
 
-### All samples except untreated - - - - - - - - - 
+### All samples except untreated - - - - - - - - -
 vsd_treated <- vsd[, vsd$treatment != "untreated"]
 pca_treated <- make_pca_plot(vsd_treated, "All mock- and elicitor-treated samples", c("treatment", "temperature", "time"))
