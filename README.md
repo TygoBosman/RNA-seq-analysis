@@ -3,12 +3,13 @@ This repository provides various files to analyse an RNA-seq dataset.
 
 
 ### List of files supplied in this repository 
-1. GO Enrichment 
-2. Heatmap
-3. PCA plots
+1. 
+2. GO Enrichment 
+3. Heatmap
+4. PCA plots
     - Scree plots 
-4. Venn diagram
-5. Volcano plots
+5. Venn diagram
+6. Volcano plots
 
 
 # Required Packages
@@ -20,6 +21,9 @@ The code for the initial data analysis can be found in https://github.com/JordiA
 
 
 # Specific functions of each file 
+## Count Plot
+The Count plot file generates a barplot that shows the the amount of total raw counts per sample. 
+
 ## GO Enrichment 
 The GO enrichment file uses 2 functions specified in [group_analysis.R](https://github.com/JordiAlonsoEsteve/RNAseqAnalysisWorkshop/blob/main/code/Statistical_Analysis/group_analysis.R) to filter and assign GO terms based on TAIR identifiers for biological process.
 
@@ -31,7 +35,7 @@ Some additional filtering is applied. After which the optimal number of clusters
 
 The optimal number of clusters can then be specified after which classical hierarchical clustering is applied to the data and a heatmap is generated.
 
-## PCA plot 
+## PCA Plot 
 The PCA plot code provides code for generating PCA plots based on count data. 
 - Important to note: The PCA plot uses the variance stabilized transformed counts and as such requires a different input than the "dds" supplied by [DEA.R](https://github.com/JordiAlonsoEsteve/RNAseqAnalysisWorkshop/blob/main/code/Statistical_Analysis/DEA.R).
 
