@@ -79,7 +79,7 @@ make_pca_plot <- function(vsd_subset, plot_title) {
 ### All samples - - - - - - - - - -
 plot <- make_pca_plot(vsd, "PCA of all RNA-seq samples")
 
-# plot + facet_wrap(~ time) # able to display a seperate plot for each coefficient
+# plot + facet_wrap(~ time) # able to display a separate plot for each coefficient
 
 
 ### All samples except untreated - - - - - - - - -

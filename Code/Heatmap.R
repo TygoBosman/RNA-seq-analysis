@@ -9,8 +9,7 @@ dds <- readRDS("../Data/Processed/dds_fitted.rds") # directories have to be chan
 
 
 # - - Starting settings - - - - - - - - - - - -
-p_cutoff <- 0.05
-treatment_of_interest <- "Pep1" # not used in this script
+p_cutoff <- 1e-06
 time_numeric <- c(0.5, 2, 6, 24)
 
 # - - Treatment vs mock effect at each timepoint at 21C - - - - - - -
