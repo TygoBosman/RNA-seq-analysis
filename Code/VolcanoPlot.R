@@ -3,7 +3,7 @@ library("apeglm")
 library(EnhancedVolcano)
 library(dplyr)
 
-dds <- readRDS("../Data/Processed/dds_fitted.rds")
+dds <- readRDS("../Data/Processed/dds_fitted.rds") # directories have to be changed to your own directories
 # res <- results(dds)
 # print(res)
 
