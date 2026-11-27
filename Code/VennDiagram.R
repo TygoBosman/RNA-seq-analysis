@@ -4,9 +4,9 @@ library(ggplot2)
 library(VennDiagram)
 
 # all directories have to be changed to your own directories
-dds       <- readRDS(str_glue("./dds_object.rds"))
-contrasts <- readRDS(str_glue("./contrasts_agains_mock.rds"))
-plot_dir <- "../../Venn_diagram"
+dds       <- readRDS(str_glue("../Data/PDAMP/dds_object.rds"))
+contrasts <- readRDS(str_glue("../Data/PDAMP/contrasts_against_mock.rds"))
+plot_dir <- "../Data/Venn_diagram"
 
 # Select four contrasts
 selected_keys <- c(

@@ -6,10 +6,10 @@ library(ggplot2)
 library(stringr)
 
 # load the data (directories have to be changed to your own directories)
-dds       <- readRDS(str_glue("./dds_object.rds"))
-contrasts <- readRDS(str_glue("./contrasts_agains_mock.rds"))
+dds       <- readRDS(str_glue("../Data/PDAMP/dds_object.rds"))
+contrasts <- readRDS(str_glue("../Data/PDAMP/contrasts_against_mock.rds"))
 
-plot_dir <- str_glue("../../GO enrichment")
+plot_dir <- str_glue("../Data/GO enrichment")
 
 
 # group analysis
