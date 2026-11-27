@@ -3,8 +3,9 @@ library(stringr)
 library(ggplot2)
 library(VennDiagram)
 
+# all directories have to be changed to your own directories
 dds       <- readRDS(str_glue("./dds_object.rds"))
-contrasts <- readRDS(str_glue("./contrasts_agains_mock.rds"))
+contrasts <- readRDS(str_glue("./contrasts_agains_mock.rds")) 
 plot_dir <- "../../Venn_diagram"
 
 
