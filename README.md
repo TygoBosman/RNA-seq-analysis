@@ -3,7 +3,7 @@ This repository provides various files to analyse an RNA-seq dataset.
 
 
 ### List of files supplied in this repository 
-1. 
+1. CountPlot
 2. GO Enrichment 
 3. Heatmap
 4. PCA plots
