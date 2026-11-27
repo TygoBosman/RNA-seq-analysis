@@ -70,7 +70,8 @@ plot_scree <- function(vsd, standardize = FALSE, n_components = NULL) {
   height = 8,
   dpi = 300
   )
+
+  p_scree # return the plot
 }
 
 scree_plot <- plot_scree(vsd, standardize = FALSE)
-scree_plot # return the plot
