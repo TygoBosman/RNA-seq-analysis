@@ -20,6 +20,7 @@ if (length(missing_names) > 0) {
 }
 
 # - - - - Shrink the LFC - - - - - - - - - - - - - - - - - - - - -
+# # # Important to note is that lfcShrink takes a long time to run. Only run it for the first time to generate the shrunk LFC results. After that, you can load the saved RDS file and skip this step. # # #
 bp7 <- BiocParallel::SnowParam(workers = 7, type = "SOCK") # using 7 different cores for parallel processing
 
 lfc_trimmed_results <- setNames(
@@ -149,6 +150,7 @@ for (nm in names(lfc_trimmed_results)) {
     dpi = 300
   )
 }
+
 
 # - - print the TAIR gene names - - - - - - - - - - - - - - 
 print(sig_hit_all[["treatment_flg22_vs_mock"]]) # for each of the compared coefficients 
