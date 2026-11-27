@@ -2,7 +2,7 @@ library(DESeq2)
 library(ggplot2)
 library(stringr)
 
-setwd("C:/Users/tjcbo/OneDrive/Documenten/uni/MCLS/Year 1/Major Research Project (GSLS-MAJRP)/Code/Data/PDAMP/PDAMP") 
+setwd("../Code/Data/PDAMP/PDAMP") 
 source("../../../R/Utils.R")
 source("../../../R/group_analysis.R")
 
@@ -70,7 +70,7 @@ make_pca_plot <- function(vsd_subset, plot_title) {
   filename <- file.path(plot_dir, paste0("PCA_", gsub("[^A-Za-z0-9_-]+", "_", plot_title), ".png"))
 
   ggsave(filename = filename, plot = p, width = 10, height = 8, dpi = 300)
-  p # return the plot 
+  p # return the plot
 }
 
 

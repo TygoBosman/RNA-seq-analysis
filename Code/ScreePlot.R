@@ -27,7 +27,7 @@ plot_scree <- function(vsd, standardize = FALSE, n_components = NULL) {
   }
 
   # Center columns; optionally scale them to unit variance.
-  pca <- prcomp(x, center = TRUE, scale. = standardize)
+  pca <- prcomp(x, center = TRUE, scale. = standardize) # calculates the PCA 
 
   # Calculate proportions using the variance from the full PCA.
   variance <- pca$sdev^2 / sum(pca$sdev^2)

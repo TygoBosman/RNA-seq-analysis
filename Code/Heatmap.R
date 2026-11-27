@@ -9,12 +9,12 @@ dds <- readRDS("../Data/Processed/dds_fitted.rds") # directories have to be chan
 
 
 # - - Starting settings - - - - - - - - - - - -
-p_cutoff <- 1e-06
+p_cutoff <- 1e-6
 time_numeric <- c(0.5, 2, 6, 24)
 
 # - - Treatment vs mock effect at each timepoint at 21C - - - - - - -
 coef_by_time <- list(
-  "t0.5" = "treatment_Pep1_vs_mock", # Change the treatment tested here to any of the treatments in the model (e.g., flg22, nlp24, SCOOP10)
+  "t0.5" = "treatment_Pep1_vs_mock", # Change the treatment tested here to one of the tested treatments (Pep1, flg22, nlp24, SCOOP10)
   "t2"   = c("treatment_Pep1_vs_mock", "treatmentPep1.timet2"),
   "t6"   = c("treatment_Pep1_vs_mock", "treatmentPep1.timet6"),
   "t24"  = c("treatment_Pep1_vs_mock", "treatmentPep1.timet24")
@@ -105,7 +105,9 @@ set.seed(101)  # controls which genes are sampled
 genes_subset <- sample(gene_pool, min(500L, length(gene_pool))) # able to change test pool size by editing the 500L number here
 x_test <- as.data.frame(x_all[genes_subset, , drop = FALSE])
 
+
 # - - Run NbClust - - - - - - - - - - - - -
+# # # Important to note is that NbClust takes a long time to run. Only run it for the first time to determine the optimal number of clusters. After that, you can set the optimal number of clusters in the code below and skip this step. # # #
 set.seed(1)
 nb_subset <- NbClust(
   data = x_test,
@@ -121,7 +123,7 @@ print(nb_subset$Best.nc)
 
 
 # - - hclust - - - - - - - - - - - - - - - - - - - - - -
-optimal_k <- 7 # Cluster number to test (tested with NbClust, can be changed to any number of clusters)
+optimal_k <- 7 # Number of clusters used for the clustering. Use the a number specified by NbClust
 
 # cluster_input: genes in rows, timepoints in columns
 x <- as.matrix(cluster_input)

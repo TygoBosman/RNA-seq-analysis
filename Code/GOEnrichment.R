@@ -9,7 +9,7 @@ library(stringr)
 dds       <- readRDS(str_glue("./dds_object.rds"))
 contrasts <- readRDS(str_glue("./contrasts_agains_mock.rds"))
 
-plot_dir <- str_glue("C:/Users/tjcbo/OneDrive/Documenten/uni/MCLS/Year 1/Major Research Project (GSLS-MAJRP)/Code/Data/GO enrichment")
+plot_dir <- str_glue("../../GO enrichment")
 
 
 # group analysis

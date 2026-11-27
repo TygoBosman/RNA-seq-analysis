@@ -5,23 +5,8 @@ library(VennDiagram)
 
 # all directories have to be changed to your own directories
 dds       <- readRDS(str_glue("./dds_object.rds"))
-contrasts <- readRDS(str_glue("./contrasts_agains_mock.rds")) 
+contrasts <- readRDS(str_glue("./contrasts_agains_mock.rds"))
 plot_dir <- "../../Venn_diagram"
-
-
-# - - - Possible keys - - - - - - - - - -
-#  [1] "T21__flg22__t0.5"   "T28__flg22__t0.5"   "T21__nlp24__t0.5"  
-#  [4] "T28__nlp24__t0.5"   "T21__Pep1__t0.5"    "T28__Pep1__t0.5"   
-#  [7] "T21__SCOOP10__t0.5" "T28__SCOOP10__t0.5" "T21__flg22__t2"    
-# [10] "T28__flg22__t2"     "T21__nlp24__t2"     "T28__nlp24__t2"    
-# [13] "T21__Pep1__t2"      "T28__Pep1__t2"      "T21__SCOOP10__t2"  
-# [16] "T28__SCOOP10__t2"   "T21__flg22__t6"     "T28__flg22__t6"    
-# [19] "T21__nlp24__t6"     "T28__nlp24__t6"     "T21__Pep1__t6"     
-# [22] "T28__Pep1__t6"      "T21__SCOOP10__t6"   "T28__SCOOP10__t6"  
-# [25] "T21__flg22__t24"    "T28__flg22__t24"    "T21__nlp24__t24"   
-# [28] "T28__nlp24__t24"    "T21__Pep1__t24"     "T28__Pep1__t24"    
-# [31] "T21__SCOOP10__t24"  "T28__SCOOP10__t24" 
-
 
 # Select four contrasts
 selected_keys <- c(
