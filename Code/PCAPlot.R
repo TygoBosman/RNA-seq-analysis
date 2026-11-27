@@ -6,7 +6,7 @@ source("./R/Utils.R")
 source("./R/group_analysis.R")
 
 # - - - Specifying the custom colors for the treatments - - - - -
-treatment_colors <- c("untreated" = "#999999", "mock"      = "#159D91", "flg22"     = "#D17A35", "nlp24"     = "#B05F91", "Pep1"      = "#7251A3", "SCOOP10"   = "#526A7A")
+treatment_colors <- c("untreated" = "#999999", "mock" = "#159D91", "flg22" = "#D17A35", "nlp24" = "#B05F91", "Pep1" = "#7251A3", "SCOOP10" = "#526A7A")
 
 # - - - Specifying the plotting directory - - - - -
 plot_dir <- "../Data/analysis_pca" # set this to the directory you want the plots saved to 
