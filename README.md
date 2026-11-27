@@ -17,9 +17,3 @@ The code for the initial data analysis can be found in https://github.com/JordiA
     - It is assumed that the starting file is a count table with TAIR12 gene names when running those files 
 
 - For GOEnrichment [group_analysis.R](https://github.com/JordiAlonsoEsteve/RNAseqAnalysisWorkshop/blob/main/code/Statistical_Analysis/group_analysis.R) is also required
-
-
-
-# Function of the files supplied
-## GO enrichment 
-
